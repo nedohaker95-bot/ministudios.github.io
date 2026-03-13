@@ -2,34 +2,152 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Ministudios</title>
+    <title>Android Market 2012</title>
     <style>
+        /* Стиль в духе 2012 года */
         body {
-            background-color: #f0f0f0;
-            font-family: "Segoe UI", Tahoma, sans-serif;
+            background-color: #e6e6e6;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Верхняя зеленая панель */
+        header {
+            background: linear-gradient(to bottom, #a4c639, #8db021);
+            color: white;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #7a9a1a;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .market-logo {
+            font-weight: bold;
+            font-size: 20px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        /* Вкладки под заголовком */
+        nav {
+            background: #333;
+            display: flex;
+            border-bottom: 1px solid #000;
+        }
+
+        nav div {
+            flex: 1;
+            text-align: center;
+            padding: 12px 0;
+            color: #ccc;
+            font-size: 14px;
+            text-transform: uppercase;
+            border-right: 1px solid #444;
+            cursor: pointer;
+        }
+
+        nav div.active {
+            color: white;
+            background: #444;
+            border-bottom: 3px solid #a4c639;
+        }
+
+        /* Список приложений */
+        .content {
+            padding: 10px;
+        }
+
+        .app-card {
+            background: white;
+            margin-bottom: 8px;
+            padding: 10px;
+            display: flex;
+            border: 1px solid #ccc;
+            border-radius: 2px;
+        }
+
+        .app-icon {
+            width: 60px;
+            height: 60px;
+            background: #eee;
+            margin-right: 15px;
+            border-radius: 8px;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
+            font-size: 10px;
+            color: #999;
+            border: 1px solid #ddd;
         }
-        .container {
-            background: white;
-            padding: 20px 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            border: 1px solid #ccc;
+
+        .app-info {
+            flex: 1;
         }
-        h1 {
+
+        .app-title {
+            font-weight: bold;
             color: #333;
-            margin: 0;
+            font-size: 16px;
+            margin-bottom: 3px;
+        }
+
+        .app-developer {
+            color: #666;
+            font-size: 13px;
+        }
+
+        .price {
+            background: #f0f0f0;
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-weight: bold;
+            color: #444;
+            border: 1px solid #ccc;
+            align-self: center;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Ministudios</h1>
-        <p>Сайт скоро будет готов!</p>
+
+<header>
+    <div class="market-logo">Android Market</div>
+</header>
+
+<nav>
+    <div class="active">Приложения</div>
+    <div>Игры</div>
+    <div>Мои файлы</div>
+</nav>
+
+<div class="content">
+    <div class="app-card">
+        <div class="app-icon">LOGO</div>
+        <div class="app-info">
+            <div class="app-title">PL Messenger</div>
+            <div class="app-developer">Ministudios</div>
+        </div>
+        <div class="price">Бесплатно</div>
     </div>
+
+    <div class="app-card">
+        <div class="app-icon">LOGO</div>
+        <div class="app-info">
+            <div class="app-title">Skyper 2012</div>
+            <div class="app-developer">Ministudios</div>
+        </div>
+        <div class="price">Бесплатно</div>
+    </div>
+    
+    <div class="app-card">
+        <div class="app-icon">LOGO</div>
+        <div class="app-info">
+            <div class="app-title">Duo Horror</div>
+            <div class="app-developer">Ministudios</div>
+        </div>
+        <div class="price">199 руб.</div>
+    </div>
+</div>
+
 </body>
 </html>
