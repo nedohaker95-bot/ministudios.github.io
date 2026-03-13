@@ -3,36 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Android Market</title>
+    <title>Android Market 2012</title>
     <style>
-        /* Ретро-стиль Android Market 2.3.6 */
+        /* Стиль в духе 2012 года */
         body {
-            background-color: #eeeeee;
+            background-color: #f0f0f0;
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
 
-        /* Верхняя плашка */
+        /* Верхняя зеленая панель */
         header {
-            background: linear-gradient(to bottom, #98c01d 0%, #82a513 100%);
+            background: linear-gradient(to bottom, #a4c639, #8db021);
             color: white;
-            padding: 12px 15px;
+            padding: 10px;
             display: flex;
             align-items: center;
-            border-bottom: 2px solid #6d8a10;
+            border-bottom: 2px solid #7a9a1a;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            flex-shrink: 0;
         }
 
-        .logo-text {
-            font-size: 20px;
+        .market-logo {
             font-weight: bold;
-            text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+            font-size: 20px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
         }
 
-        /* Навигация */
+        /* Тёмная панель вкладок */
         nav {
-            background: #323232;
+            background: #333;
             display: flex;
+            border-bottom: 1px solid #000;
+            flex-shrink: 0;
         }
 
         nav div {
@@ -40,97 +47,73 @@
             text-align: center;
             padding: 12px 0;
             color: #bbbbbb;
-            font-size: 13px;
-            font-weight: bold;
+            font-size: 14px;
             text-transform: uppercase;
-            cursor: pointer;
             border-right: 1px solid #444;
+            cursor: pointer;
         }
 
         nav div.active {
             color: white;
-            background: #404040;
-            border-bottom: 3px solid #98c01d;
+            background: #444;
+            border-bottom: 3px solid #a4c639;
         }
 
-        /* Контент */
-        .app-list {
-            padding: 10px;
-        }
-
-        .app-item {
-            background: white;
-            border: 1px solid #d0d0d0;
-            margin-bottom: 4px;
+        /* Центральная часть с рекламой */
+        .market-content {
+            flex-grow: 1;
             display: flex;
-            padding: 8px;
+            justify-content: center;
             align-items: center;
+            padding: 20px;
         }
 
-        .app-icon {
-            width: 52px;
-            height: 52px;
-            background: #f5f5f5;
-            border: 1px solid #e0e0e0;
-            margin-right: 12px;
+        /* Рекламный баннер (Генерация картинки) */
+        .ad-banner {
+            width: 100%;
+            max-width: 600px;
+            height: 250px;
+            border: 1px solid #c0c0c0;
+            border-radius: 3px;
+            background-color: #e0e0e0;
+            background-image: 
+                linear-gradient(to right, #e0e0e0 10%, transparent 10%, transparent 50%, #e0e0e0 50%, #e0e0e0 60%, transparent 60%, transparent 100%),
+                linear-gradient(to bottom, #e0e0e0 10%, transparent 10%, transparent 50%, #e0e0e0 50%, #e0e0e0 60%, transparent 60%, transparent 100%),
+                linear-gradient(45deg, #e0e0e0 25%, #d8d8d8 25%, #d8d8d8 50%, #e0e0e0 50%, #e0e0e0 75%, #d8d8d8 75%, #d8d8d8 100%);
+            background-size: 80px 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #444;
+            font-size: 18px;
+            font-weight: bold;
+            text-shadow: 1px 1px 1px white;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .ad-banner span {
+            background-color: rgba(224, 224, 224, 0.9);
+            padding: 10px 20px;
             border-radius: 4px;
         }
 
-        .app-details {
-            flex-grow: 1;
-        }
-
-        .app-name {
-            font-weight: bold;
-            font-size: 16px;
-            color: #222;
-            margin-bottom: 2px;
-        }
-
-        .app-sub {
-            color: #777;
-            font-size: 13px;
-        }
-
-        .price-tag {
-            background: #e8e8e8;
-            border: 1px solid #cccccc;
-            padding: 4px 8px;
-            font-size: 14px;
-            font-weight: bold;
-            color: #444;
-            border-radius: 2px;
-        }
     </style>
 </head>
 <body>
 
 <header>
-    <div class="logo-text">Android Market</div>
+    <div class="market-logo">Android Market</div>
 </header>
 
 <nav>
     <div class="active">Приложения</div>
     <div>Игры</div>
+    <div>Мои файлы</div>
 </nav>
 
-<div class="app-list">
-    <div class="app-item">
-        <div class="app-icon" style="background: #ffa500; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">PL</div>
-        <div class="app-details">
-            <div class="app-name">PL Messenger</div>
-            <div class="app-sub">Ministudios</div>
-        </div>
-        <div class="price-tag">Бесплатно</div>
-    </div>
-
-    <div class="app-item" style="opacity: 0.7;">
-        <div class="app-icon"></div>
-        <div class="app-details">
-            <div class="app-name">Новый проект</div>
-            <div class="app-sub">Скоро в Маркете...</div>
-        </div>
-        <div class="price-tag">---</div>
+<div class="market-content">
+    <div class="ad-banner">
+        <span>Здесь может быть ваша реклама!</span>
     </div>
 </div>
 
