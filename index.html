@@ -2,150 +2,135 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Android Market 2012</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Android Market</title>
     <style>
-        /* Стиль в духе 2012 года */
+        /* Ретро-стиль Android Market 2.3.6 */
         body {
-            background-color: #e6e6e6;
+            background-color: #eeeeee;
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
         }
 
-        /* Верхняя зеленая панель */
+        /* Верхняя плашка */
         header {
-            background: linear-gradient(to bottom, #a4c639, #8db021);
+            background: linear-gradient(to bottom, #98c01d 0%, #82a513 100%);
             color: white;
-            padding: 10px;
+            padding: 12px 15px;
             display: flex;
             align-items: center;
-            border-bottom: 2px solid #7a9a1a;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            border-bottom: 2px solid #6d8a10;
         }
 
-        .market-logo {
-            font-weight: bold;
+        .logo-text {
             font-size: 20px;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+            font-weight: bold;
+            text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
         }
 
-        /* Вкладки под заголовком */
+        /* Навигация */
         nav {
-            background: #333;
+            background: #323232;
             display: flex;
-            border-bottom: 1px solid #000;
         }
 
         nav div {
             flex: 1;
             text-align: center;
             padding: 12px 0;
-            color: #ccc;
-            font-size: 14px;
+            color: #bbbbbb;
+            font-size: 13px;
+            font-weight: bold;
             text-transform: uppercase;
-            border-right: 1px solid #444;
             cursor: pointer;
+            border-right: 1px solid #444;
         }
 
         nav div.active {
             color: white;
-            background: #444;
-            border-bottom: 3px solid #a4c639;
+            background: #404040;
+            border-bottom: 3px solid #98c01d;
         }
 
-        /* Список приложений */
-        .content {
+        /* Контент */
+        .app-list {
             padding: 10px;
         }
 
-        .app-card {
+        .app-item {
             background: white;
-            margin-bottom: 8px;
-            padding: 10px;
+            border: 1px solid #d0d0d0;
+            margin-bottom: 4px;
             display: flex;
-            border: 1px solid #ccc;
-            border-radius: 2px;
+            padding: 8px;
+            align-items: center;
         }
 
         .app-icon {
-            width: 60px;
-            height: 60px;
-            background: #eee;
-            margin-right: 15px;
-            border-radius: 8px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 10px;
-            color: #999;
-            border: 1px solid #ddd;
+            width: 52px;
+            height: 52px;
+            background: #f5f5f5;
+            border: 1px solid #e0e0e0;
+            margin-right: 12px;
+            border-radius: 4px;
         }
 
-        .app-info {
-            flex: 1;
+        .app-details {
+            flex-grow: 1;
         }
 
-        .app-title {
+        .app-name {
             font-weight: bold;
-            color: #333;
             font-size: 16px;
-            margin-bottom: 3px;
+            color: #222;
+            margin-bottom: 2px;
         }
 
-        .app-developer {
-            color: #666;
+        .app-sub {
+            color: #777;
             font-size: 13px;
         }
 
-        .price {
-            background: #f0f0f0;
-            padding: 5px 10px;
-            border-radius: 3px;
+        .price-tag {
+            background: #e8e8e8;
+            border: 1px solid #cccccc;
+            padding: 4px 8px;
+            font-size: 14px;
             font-weight: bold;
             color: #444;
-            border: 1px solid #ccc;
-            align-self: center;
+            border-radius: 2px;
         }
     </style>
 </head>
 <body>
 
 <header>
-    <div class="market-logo">Android Market</div>
+    <div class="logo-text">Android Market</div>
 </header>
 
 <nav>
     <div class="active">Приложения</div>
     <div>Игры</div>
-    <div>Мои файлы</div>
 </nav>
 
-<div class="content">
-    <div class="app-card">
-        <div class="app-icon">LOGO</div>
-        <div class="app-info">
-            <div class="app-title">PL Messenger</div>
-            <div class="app-developer">Ministudios</div>
+<div class="app-list">
+    <div class="app-item">
+        <div class="app-icon" style="background: #ffa500; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">PL</div>
+        <div class="app-details">
+            <div class="app-name">PL Messenger</div>
+            <div class="app-sub">Ministudios</div>
         </div>
-        <div class="price">Бесплатно</div>
+        <div class="price-tag">Бесплатно</div>
     </div>
 
-    <div class="app-card">
-        <div class="app-icon">LOGO</div>
-        <div class="app-info">
-            <div class="app-title">Skyper 2012</div>
-            <div class="app-developer">Ministudios</div>
+    <div class="app-item" style="opacity: 0.7;">
+        <div class="app-icon"></div>
+        <div class="app-details">
+            <div class="app-name">Новый проект</div>
+            <div class="app-sub">Скоро в Маркете...</div>
         </div>
-        <div class="price">Бесплатно</div>
-    </div>
-    
-    <div class="app-card">
-        <div class="app-icon">LOGO</div>
-        <div class="app-info">
-            <div class="app-title">Duo Horror</div>
-            <div class="app-developer">Ministudios</div>
-        </div>
-        <div class="price">199 руб.</div>
+        <div class="price-tag">---</div>
     </div>
 </div>
 
